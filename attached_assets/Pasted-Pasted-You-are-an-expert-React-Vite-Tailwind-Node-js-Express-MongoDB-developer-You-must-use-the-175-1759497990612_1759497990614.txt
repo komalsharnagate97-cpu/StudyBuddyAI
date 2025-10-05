@@ -1,0 +1,133 @@
+Pasted-You-are-an-expert-React-Vite-Tailwind-Node-js-Express-MongoDB-developer-You-must-use-the--1759494684397_1759494684399.txt
+You are an expert React + Vite + Tailwind + Node.js + Express + MongoDB developer.
+You must use the existing Admin Panel project archive StudyBuddyAI.zip (do not create a new project). Only add the missing features listed below; do not overwrite anything already working. Work and test locally in Replit. At the end export the updated project as AdminPanel.zip.
+
+Hard rules (follow exactly)
+
+⚠ Use the exact project StudyBuddyAI.zip that I will provide. Do not create a new project from scratch.
+
+✅ Only add missing features and fixes; everything already working must remain unchanged.
+
+❌ Do NOT deploy or purchase any paid plan. No hosting.
+
+✅ Test and run everything locally inside Replit.
+
+✅ Final deliverable for this repo: AdminPanel.zip (frontend + backend working independently).
+
+✅ Frontend run: npm install → npm run dev.
+
+✅ Backend run: npm install → node server.js (or existing start script).
+
+✅ Use Tailwind CSS. Maintain dark theme palette and responsive design (see UI rules).
+
+✅ Do not merge or combine with User Panel—keep projects independent.
+
+Required features to add/complete (Admin Panel specifics)
+
+Implement the following admin-facing features:
+
+Authentication & Admin 2FA
+
+Admin login with JWT + bcrypt. Admin accounts must be flagged with role admin.
+
+2FA (OTP) for admin login:
+
+Support either TOTP (e.g., speakeasy) or SMS/Email OTP flow.
+
+If TOTP, provide QR generation and verification during setup.
+
+Implement refresh tokens for admin sessions.
+
+Admin Dashboard & Metrics
+
+Dashboard displaying live metrics:
+
+Total users
+
+Total revenue (completed payments)
+
+Conversion rates (signups → paid)
+
+Pending withdrawals
+
+Use Socket.IO to push live metrics updates to admin client.
+
+Clients & Payments Management
+
+Clients list with payment statuses and filters (pending/completed/failed).
+
+Payment details view with ability to manually mark payments as confirmed (for “I’ve Paid” manual flows).
+
+Webhook signature verification and admin notification on failures.
+
+Referral Analytics & Management
+
+Show a 3-level referral tree for any user (visualize referrals Level 1, 2, 3).
+
+Referral campaign manager: create campaigns with commission percentages per level, active dates, and eligible products.
+
+Product & Campaign Manager
+
+CRUD for products (add/edit/delete) with images and pricing.
+
+Campaign manager for referral/discount campaigns.
+
+FAQ Editor
+
+FAQ CRUD per category. Changes should be reflected to User Panel via API.
+
+Notifications
+
+Admin broadcast API allowing emoji + title + message + timestamp.
+
+Notification history with list, ability to resend or delete.
+
+Notifications delivered via Socket.IO to users in real-time.
+
+Payout & Withdrawals Processing
+
+Payout manager: list withdrawal requests, approve/reject, auto-process (simulate processing by marking as processed with a reference id).
+
+Save payout records with reference IDs and exportable logs.
+
+Team Accounts & Roles
+
+Support creation of team accounts with role-based permissions (e.g., superadmin, finance, support, content).
+
+Role-based middleware to protect admin routes.
+
+Analytics & Exports
+
+Track demo-video watch time and drop-offs, signups, payments.
+
+Admin export CSV/Excel for leads, referrals, payments, withdrawal logs.
+
+Security & Webhooks
+
+Verify Razorpay & Stripe webhook signatures before processing events.
+
+Rate-limiting for sensitive endpoints.
+
+HTTPS-ready code, secure cookies, and server-side validation.
+
+Optional / Integrations (if time permits)
+
+CRM integration hooks (Zoho/HubSpot).
+
+Email campaign integration (Mailchimp/Sendinblue).
+
+UI & UX Rules (Admin)
+
+Use Tailwind + dark theme palette (same colors as User Panel).
+
+Sidebar vertical stack with emoji icons.
+
+Responsive and polished admin tables & charts.
+
+Use emoji icons for sidebar entries.
+
+Deliverables (Admin Panel)
+
+AdminPanel.zip — Full project (frontend + backend). Ready to run locally with instructions in README.
+
+All admin APIs must be functional and tested locally; no dummy UIs.

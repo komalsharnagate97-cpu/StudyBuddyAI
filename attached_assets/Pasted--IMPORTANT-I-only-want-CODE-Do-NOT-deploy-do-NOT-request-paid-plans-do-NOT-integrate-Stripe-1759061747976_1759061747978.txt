@@ -1,0 +1,59 @@
+⚠️ IMPORTANT: I only want CODE.  
+Do NOT deploy, do NOT request paid plans, do NOT integrate Stripe/Razorpay/Binance or any live payment providers.  
+Do NOT attempt hosting or upgrades. Deliver corrected CODE only, with a final downloadable ZIP.  
+
+Context:  
+We will provide you the Admin Panel project ZIP (or GitHub repo URL).  
+You must work inside that given project only, apply the pending changes, and return the final corrected ZIP.  
+Do NOT create a new structure, and do NOT touch the User Panel (it is already complete).  
+
+Tasks:  
+
+1. Admin Panel Features:  
+   - Admin Login (Supabase Auth email+password) + Logout  
+   - Ensure only admin users can access (role check via users table flag/role).  
+   - Dashboard (show total users, revenue, conversion rate, referral summary)  
+   - Manage Products (CRUD)  
+   - Manage Users (list, edit, block)  
+   - Referrals & Wallet (approve/reject withdrawals)  
+   - FAQ Manager (CRUD)  
+   - Notifications (broadcast messages to all users)  
+   - Campaign Manager (CRUD)  
+   - AI Config per product (CRUD for ai_config table)  
+   - Responsive modular UI with proper error handling  
+
+2. Supabase Integration:  
+   - Create `supabase.ts` client using env vars (VITE_SUPABASE_URL, VITE_SUPABASE_ANON_KEY).  
+   - Do NOT hardcode keys.  
+   - If env vars missing, show console.warn and friendly UI message, but do not crash.  
+   - Provide `.env.example` with placeholders.  
+
+3. Database Schema:  
+   - Ensure `supabase-schema.sql` includes all required tables:  
+     users, products, payments, referrals, withdrawals, faq, notifications, campaigns, ai_config  
+
+4. Backend (server/index.ts):  
+   - Express server with `/health` endpoint.  
+   - Serve client build if available.  
+   - Structure ready for optional admin-only APIs.  
+
+5. Cleanup & Structure:  
+   - Implement each feature in its own folder/file (modular structure) so that future changes in one feature do not affect others.  
+   - Update `.gitignore` to exclude: `.env`, `.env.local`, `.local/`, `node_modules/`, `*.zip`, `*.tar.gz`, `dist/`, `build/`, `.DS_Store`, `.vscode`, `.idea`.  
+   - Remove leftover archives or temporary files.  
+   - Ensure final ZIP file structure is neat, clean, and modular — ready for GitHub.  
+
+6. Documentation:  
+   - Update `README.md` with clear setup steps:  
+     - Copy `.env.example` → `.env` and set real values  
+     - Run `npm install`  
+     - Run `npm run dev`  
+     - Run `supabase-schema.sql` in Supabase SQL Editor  
+     - Add admin user in Supabase Authentication (email/password)  
+     - Login with created admin credentials  
+
+Deliverables:  
+- Modify the provided Admin Panel ZIP (or GitHub repo) with all pending changes.  
+- Do NOT create a new project.  
+- Do NOT touch the User Panel.  
+- Return the final corrected Admin Panel ZIP with clean, modular structure — coding only, no deployment.
